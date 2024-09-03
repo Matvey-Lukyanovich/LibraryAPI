@@ -1,0 +1,313 @@
+{
+	"info": {
+		"_postman_id": "e11fe4e4-8f5f-4b61-9c81-8eba5db7faf3",
+		"name": "BookAPI",
+		"description": "#### 1\\. **GET** **`/api/books`** **\\- Получение списка всех книг**\n\n- **Тип запроса:** GET\n    \n- **URL:** `http://localhost:5000/api/books` (замените `localhost:5000` на ваш URL и порт).\n    \n- **Описание:** Этот запрос получает список всех книг с информацией об авторе.\n    \n\n#### 2\\. **GET** **`/api/books/{id}`** **\\- Получение книги по ID**\n\n- **Тип запроса:** GET\n    \n- **URL:** `http://localhost:5000/api/books/1` (замените `1` на существующий ID книги).\n    \n- **Описание:** Запрос для получения книги по её идентификатору.\n    \n\n#### 3\\. **GET** **`/api/books/isbn/{isbn}`** **\\- Получение книги по ISBN**\n\n- **Тип запроса:** GET\n    \n- **URL:** `http://localhost:5000/api/books/isbn/1234567890` (замените `1234567890` на существующий ISBN).\n    \n- **Описание:** Этот запрос получает книгу по её ISBN.\n    \n\n#### 4\\. **POST** **`/api/books`** **\\- Добавление новой книги**\n\n- **Тип запроса:** POST\n    \n- **URL:** `http://localhost:5000/api/books`\n    \n- **Body:** Выберите `raw` и `JSON` формат. Пример данных:\n    \n- {     \n    \"ISBN\": \"1234567890\",     \n    \"Title\": \"Example Book\",     \n    \"Genre\": \"Fiction\",     \n    \"Description\": \"An example book description.\",    \"  \n    AuthorId\": 1,  // Обязательное поле, соответствующее существующему ID автора     \n    \"BorrowedAt\": \"2024-01-01T00:00:00\",     \n    \"ReturnBy\": \"2024-01-15T00:00:00\",     \n    \"ImageUrl\": \"https://example.com/image.jpg\",     \n    \"IsBorrowed\": false  \n    }\n    \n\n#### 5\\. **PUT** **`/api/books/{id}`** **- Обновление существующей книги**\n\n- **Тип запроса:** PUT\n    \n- **URL:** `http://localhost:5000/api/books/1` (замените `1` на существующий ID книги).\n    \n- **Body:** Выберите `raw` и `JSON` формат. Пример данных:\n    \n\n{  \n\"Id\": 1,  \n\"ISBN\": \"978-3-16-148410-0\",  \n\"Title\": \"Updated Book Title\",  \n\"Genre\": \"Non-Fiction\",  \n\"Description\": \"An updated description of the book.\",  \n\"AuthorId\": 1, // Убедитесь, что ID существует  \n\"BorrowedAt\": null,  \n\"ReturnBy\": null,  \n\"ImageUrl\": null,  \n\"IsBorrowed\": false  \n}\n\n#### 6\\. **DELETE** **`/api/books/{id}`** **- Удаление книги**\n\n- **Тип запроса:** DELETE\n    \n- **URL:** `http://localhost:5000/api/books/1` (замените `1` на существующий ID книги).\n    \n- **Описание:** Удаляет книгу по её ID.\n    \n- **Проверка:** Ожидается ответ 204 No Content при успешном удалении, или 404 Not Found, если книга не существует.\n    \n\n#### 7\\. **PATCH** **`/api/books/{id}/borrow`** **- Взять книгу на время**\n\n- **Тип запроса:** PATCH\n    \n- **URL:** `http://localhost:5000/api/books/1/borrow` (замените `1` на существующий ID книги).\n    \n- **Body:** Выберите `raw` и `JSON` формат. Пример данных:\n    \n- {  \n    \"ReturnBy\": \"2024-12-31T00:00:00Z\"  \n    }\n    \n\n#### 8\\. **PATCH** **`/api/books/{id}/return`** **- Вернуть книгу**\n\n- **Тип запроса:** PATCH\n    \n- **URL:** `http://localhost:5000/api/books/1/return` (замените `1` на существующий ID книги).\n    \n- **Описание:** Помечает книгу как возвращенную.\n    \n\n#### 9\\. **POST** **`/api/books/upload-image/{id}`** **- Загрузка изображения для книги**\n\n- **Тип запроса:** POST\n    \n- **URL:** `http://localhost:5000/api/books/upload-image/1` (замените `1` на существующий ID книги).\n    \n- **Body:** Выберите `form-data`, добавьте ключ `imageFile`, установите тип в `File`, и загрузите изображение.\n    \n- **Описание:** Загружает изображение для книги",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38045557"
+	},
+	"item": [
+		{
+			"name": "Добавление новой книги",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ISBN\": \"1234567890\",\r\n    \"Title\": \"Example Book\",\r\n    \"Genre\": \"Fiction\",\r\n    \"Description\": \"An example book description.\",\r\n    \"AuthorId\": 1,  // Обязательное поле, соответствующее существующему ID автора\r\n    \"BorrowedAt\": \"2024-01-01T00:00:00\",\r\n    \"ReturnBy\": \"2024-01-15T00:00:00\",\r\n    \"ImageUrl\": \"https://example.com/image.jpg\",\r\n    \"IsBorrowed\": false\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/Books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение списка всех книг",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/Books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение книги по ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/books/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение книги по ISBN",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/books/isbn/978-3-16-148410-0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"books",
+						"isbn",
+						"978-3-16-148410-0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Обновление существующей книги",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Id\": 1,\r\n    \"ISBN\": \"978-3-16-148410-0\",\r\n    \"Title\": \"Updated Book Title\",\r\n    \"Genre\": \"Non-Fiction\",\r\n    \"Description\": \"An updated description of the book.\",\r\n    \"AuthorId\": 1, // Убедитесь, что ID существует\r\n    \"BorrowedAt\": null,\r\n    \"ReturnBy\": null,\r\n    \"ImageUrl\": \"-\",\r\n    \"IsBorrowed\": false\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/books/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление книги",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Id\": 1,\r\n    \"ISBN\": \"978-3-16-148410-0\",\r\n    \"Title\": \"Updated Book Title\",\r\n    \"Genre\": \"Non-Fiction\",\r\n    \"Description\": \"An updated description of the book.\",\r\n    \"AuthorId\": 1, // Убедитесь, что ID существует\r\n    \"BorrowedAt\": null,\r\n    \"ReturnBy\": null,\r\n    \"ImageUrl\": \"-\",\r\n    \"IsBorrowed\": false\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/books/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"books",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Взять книгу на время",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ReturnBy\": \"2024-12-31T00:00:00Z\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/books/1/borrow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"books",
+						"1",
+						"borrow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Вернуть книгу",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ReturnBy\": \"2024-12-31T00:00:00Z\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/books/1/return",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"books",
+						"1",
+						"return"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Загрузка изображения для книги",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "imageFile",
+							"type": "file",
+							"src": "/C:/Users/lyk_2/OneDrive/Desktop/lion/avatar.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/books/upload-image/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"books",
+						"upload-image",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

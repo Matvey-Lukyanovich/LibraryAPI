@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "42de8eb5-451e-40ef-9911-7b665308af88",
+		"name": "AuthorAPI",
+		"description": "#### 1\\. **GET** **`/api/authors`** **- Получение списка всех авторов**\n\n- **Тип запроса:** GET\n    \n- **URL:** `http://localhost:5000/api/authors`\n    \n\n#### 2\\. **GET** **`/api/authors/{id}`** **- Получение автора по его Id**\n\n- **Тип запроса:** GET\n    \n- **URL:** `http://localhost:5000/api/authors/1` (замените `1` на существующий ID автора).\n    \n\n3\\. **POST** **`/api/authors`** **- Добавление нового автора**\n\n- **Тип запроса:** POST\n    \n- **URL:** `http://localhost:5000/api/authors`\n    \n- **Body:** `raw` и `JSON` формат. Пример данных:\n    \n\n{  \n\"FirstName\": \"John\",  \n\"LastName\": \"Doe\",  \n\"BirthDate\": \"1980-01-01\",  \n\"Country\": \"USA\"  \n}\n\n4\\. **PUT** **`/api/authors/{id}`** **- Изменение информации о существующем авторе**\n\n- **Тип запроса:** PUT\n    \n- **URL:** `http://localhost:5000/api/authors/1` (замените `1` на существующий ID автора).\n    \n- **Body:** `raw` и `JSON` формат. Пример данных:\n    \n- {  \n    \"Id\": 1,  \n    \"FirstName\": \"John\",  \n    \"LastName\": \"Doe\",  \n    \"BirthDate\": \"1980-01-01\",  \n    \"Country\": \"USA\"  \n    }\n    \n\n5\\. **DELETE** **`/api/authors/{id}`** **- Удаление автора**\n\n- **Тип запроса:** DELETE\n    \n- **URL:** `http://localhost:5000/api/authors/1` (замените `1` на существующий ID автора)\n    \n\n#### 6\\. **GET** **`/api/authors/{id}/books`** **- Получение всех книг по автору**\n\n- **Тип запроса:** GET\n    \n- **URL:** `http://localhost:5000/api/authors/1/books` (замените `1` на существующий ID автора).",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38045557"
+	},
+	"item": [
+		{
+			"name": "Получение списка всех авторов",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/authors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение автора по его Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/authors/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"authors",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Добавление нового автора",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"FirstName\": \"John\",\r\n    \"LastName\": \"Doe\",\r\n    \"BirthDate\": \"1980-01-01\",\r\n    \"Country\": \"USA\"\r\n  \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/authors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Изменение информации о существующем авторе",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Id\": 1,\r\n    \"FirstName\": \"John\",\r\n    \"LastName\": \"Doe\",\r\n    \"BirthDate\": \"1980-01-01\",\r\n    \"Country\": \"USA\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/authors/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"authors",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление автора",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Id\": 1,\r\n    \"FirstName\": \"John\",\r\n    \"LastName\": \"Doe\",\r\n    \"BirthDate\": \"1980-01-01\",\r\n    \"Country\": \"USA\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/authors/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"authors",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение всех книг по автору",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/authors/1/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"authors",
+						"1",
+						"books"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

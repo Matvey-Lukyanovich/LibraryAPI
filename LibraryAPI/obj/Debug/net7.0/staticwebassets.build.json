@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "YhE8iNO4g2M7bjxRJXXUkErjMQJSNumYJ/dHcu+NsAA=",
+  "Source": "LibraryAPI",
+  "BasePath": "_content/LibraryAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "LibraryAPI\\wwwroot",
+      "Source": "LibraryAPI",
+      "ContentRoot": "C:\\Users\\lyk_2\\OneDrive\\Desktop\\TASK\\Test-Task\\LibraryAPI\\wwwroot\\",
+      "BasePath": "_content/LibraryAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\lyk_2\\OneDrive\\Desktop\\TASK\\Test-Task\\LibraryAPI\\wwwroot\\images\\avatar.jpg",
+      "SourceId": "LibraryAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lyk_2\\OneDrive\\Desktop\\TASK\\Test-Task\\LibraryAPI\\wwwroot\\",
+      "BasePath": "_content/LibraryAPI",
+      "RelativePath": "images/avatar.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\avatar.jpg"
+    }
+  ]
+}
