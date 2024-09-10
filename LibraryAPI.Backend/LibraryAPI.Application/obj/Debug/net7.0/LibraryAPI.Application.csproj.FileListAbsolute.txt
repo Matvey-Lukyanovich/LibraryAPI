@@ -1,0 +1,15 @@
+C:\Users\lyk_2\OneDrive\Desktop\TASK\new\LibraryAPI.Backend\LibraryAPI.Application\bin\Debug\net7.0\LibraryAPI.Application.deps.json
+C:\Users\lyk_2\OneDrive\Desktop\TASK\new\LibraryAPI.Backend\LibraryAPI.Application\bin\Debug\net7.0\LibraryAPI.Application.dll
+C:\Users\lyk_2\OneDrive\Desktop\TASK\new\LibraryAPI.Backend\LibraryAPI.Application\bin\Debug\net7.0\LibraryAPI.Application.pdb
+C:\Users\lyk_2\OneDrive\Desktop\TASK\new\LibraryAPI.Backend\LibraryAPI.Application\bin\Debug\net7.0\LibraryAPI.Domain.dll
+C:\Users\lyk_2\OneDrive\Desktop\TASK\new\LibraryAPI.Backend\LibraryAPI.Application\bin\Debug\net7.0\LibraryAPI.Domain.pdb
+C:\Users\lyk_2\OneDrive\Desktop\TASK\new\LibraryAPI.Backend\LibraryAPI.Application\obj\Debug\net7.0\LibraryAPI.Application.csproj.AssemblyReference.cache
+C:\Users\lyk_2\OneDrive\Desktop\TASK\new\LibraryAPI.Backend\LibraryAPI.Application\obj\Debug\net7.0\LibraryAPI.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lyk_2\OneDrive\Desktop\TASK\new\LibraryAPI.Backend\LibraryAPI.Application\obj\Debug\net7.0\LibraryAPI.Application.AssemblyInfoInputs.cache
+C:\Users\lyk_2\OneDrive\Desktop\TASK\new\LibraryAPI.Backend\LibraryAPI.Application\obj\Debug\net7.0\LibraryAPI.Application.AssemblyInfo.cs
+C:\Users\lyk_2\OneDrive\Desktop\TASK\new\LibraryAPI.Backend\LibraryAPI.Application\obj\Debug\net7.0\LibraryAPI.Application.csproj.CoreCompileInputs.cache
+C:\Users\lyk_2\OneDrive\Desktop\TASK\new\LibraryAPI.Backend\LibraryAPI.Application\obj\Debug\net7.0\LibraryAPI.Application.csproj.CopyComplete
+C:\Users\lyk_2\OneDrive\Desktop\TASK\new\LibraryAPI.Backend\LibraryAPI.Application\obj\Debug\net7.0\LibraryAPI.Application.dll
+C:\Users\lyk_2\OneDrive\Desktop\TASK\new\LibraryAPI.Backend\LibraryAPI.Application\obj\Debug\net7.0\refint\LibraryAPI.Application.dll
+C:\Users\lyk_2\OneDrive\Desktop\TASK\new\LibraryAPI.Backend\LibraryAPI.Application\obj\Debug\net7.0\LibraryAPI.Application.pdb
+C:\Users\lyk_2\OneDrive\Desktop\TASK\new\LibraryAPI.Backend\LibraryAPI.Application\obj\Debug\net7.0\ref\LibraryAPI.Application.dll
