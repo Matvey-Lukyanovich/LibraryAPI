@@ -10,3 +10,15 @@ C:\Users\lyk_2\OneDrive\Desktop\TASK\new\LibraryAPI.Backend\LibraryAPI.Domain\ob
 C:\Users\lyk_2\OneDrive\Desktop\TASK\new\LibraryAPI.Backend\LibraryAPI.Domain\obj\Debug\net7.0\refint\LibraryAPI.Domain.dll
 C:\Users\lyk_2\OneDrive\Desktop\TASK\new\LibraryAPI.Backend\LibraryAPI.Domain\obj\Debug\net7.0\LibraryAPI.Domain.pdb
 C:\Users\lyk_2\OneDrive\Desktop\TASK\new\LibraryAPI.Backend\LibraryAPI.Domain\obj\Debug\net7.0\ref\LibraryAPI.Domain.dll
+C:\Users\lyk_2\OneDrive\Desktop\TASK\git\LibraryAPI\LibraryAPI.Backend\LibraryAPI.Domain\bin\Debug\net7.0\LibraryAPI.Domain.deps.json
+C:\Users\lyk_2\OneDrive\Desktop\TASK\git\LibraryAPI\LibraryAPI.Backend\LibraryAPI.Domain\bin\Debug\net7.0\LibraryAPI.Domain.dll
+C:\Users\lyk_2\OneDrive\Desktop\TASK\git\LibraryAPI\LibraryAPI.Backend\LibraryAPI.Domain\bin\Debug\net7.0\LibraryAPI.Domain.pdb
+C:\Users\lyk_2\OneDrive\Desktop\TASK\git\LibraryAPI\LibraryAPI.Backend\LibraryAPI.Domain\obj\Debug\net7.0\LibraryAPI.Domain.csproj.AssemblyReference.cache
+C:\Users\lyk_2\OneDrive\Desktop\TASK\git\LibraryAPI\LibraryAPI.Backend\LibraryAPI.Domain\obj\Debug\net7.0\LibraryAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lyk_2\OneDrive\Desktop\TASK\git\LibraryAPI\LibraryAPI.Backend\LibraryAPI.Domain\obj\Debug\net7.0\LibraryAPI.Domain.AssemblyInfoInputs.cache
+C:\Users\lyk_2\OneDrive\Desktop\TASK\git\LibraryAPI\LibraryAPI.Backend\LibraryAPI.Domain\obj\Debug\net7.0\LibraryAPI.Domain.AssemblyInfo.cs
+C:\Users\lyk_2\OneDrive\Desktop\TASK\git\LibraryAPI\LibraryAPI.Backend\LibraryAPI.Domain\obj\Debug\net7.0\LibraryAPI.Domain.csproj.CoreCompileInputs.cache
+C:\Users\lyk_2\OneDrive\Desktop\TASK\git\LibraryAPI\LibraryAPI.Backend\LibraryAPI.Domain\obj\Debug\net7.0\LibraryAPI.Domain.dll
+C:\Users\lyk_2\OneDrive\Desktop\TASK\git\LibraryAPI\LibraryAPI.Backend\LibraryAPI.Domain\obj\Debug\net7.0\refint\LibraryAPI.Domain.dll
+C:\Users\lyk_2\OneDrive\Desktop\TASK\git\LibraryAPI\LibraryAPI.Backend\LibraryAPI.Domain\obj\Debug\net7.0\LibraryAPI.Domain.pdb
+C:\Users\lyk_2\OneDrive\Desktop\TASK\git\LibraryAPI\LibraryAPI.Backend\LibraryAPI.Domain\obj\Debug\net7.0\ref\LibraryAPI.Domain.dll

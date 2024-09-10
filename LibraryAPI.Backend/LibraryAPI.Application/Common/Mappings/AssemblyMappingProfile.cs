@@ -1,5 +1,6 @@
 ﻿using System.Reflection;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore.Design;
 
 namespace LibraryAPI.Application.Common.Mappings
 {
