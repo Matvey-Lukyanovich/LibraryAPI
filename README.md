@@ -12,15 +12,16 @@
 
 
 3. Делаем миграцию:
-PS C:\....\LibraryAPI\LibraryAPI.Backend> cd LibraryAPI.Application
-PS C:\....\LibraryAPI\LibraryAPI.Backend\LibraryAPI.Application> dotnet ef migrations add InitialCreate
-PS C:\....\LibraryAPI\LibraryAPI.Backend\LibraryAPI.Application> dotnet ef database update
+   
+PS C:\....\LibraryAPI\LibraryAPI.Backend> cd LibraryAPI.WebApi
 
-*если не сработало то возможно поставить Entity Framework Core
-*вписываем:
-*dotnet tool install --global dotnet-ef --version 7.*
-*устанавливает Entity Framework Core*
-*dotnet add package Microsoft.EntityFrameworkCore.Design*
+PS C:\....\LibraryAPI\LibraryAPI.Backend\LibraryAPI.WebApi> dotnet ef migrations add InitialCreate --project ../LibraryAPI.Persistence
+
+PS C:\....\LibraryAPI\LibraryAPI.Backend\LibraryAPI.WebApi> dotnet ef database update --project ../LibraryAPI.Persistence
+
+
+*Удалить миграцию
+*C:\...\LibraryAPI.Backend\LibraryAPI.WebApi> dotnet ef migrations remove --project ../LibraryAPI.Persistence
 
 
 4. После этого в БД у нас появляются таблицы и поля.
