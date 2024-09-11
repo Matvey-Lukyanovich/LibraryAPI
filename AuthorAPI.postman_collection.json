@@ -11,7 +11,13 @@
 			"name": "Получение списка всех авторов",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwianRpIjoiMDZmNTFlNGYtNjEzOC00Mjg0LTliNzMtZWVmZjc5NDEyYzc1IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3MjYwNDc1NjEsImlzcyI6InlvdXJhcHBpc3N1ZXIiLCJhdWQiOiJ5b3VyYXBwYXVkaWVuY2UifQ.N6YdCPl-GFlC8CIQDqtr5J6M-SUqqbflO2SwlM0Hpws",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "http://localhost:5000/api/authors",
 					"protocol": "http",
@@ -31,7 +37,13 @@
 			"name": "Получение автора по его Id",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwianRpIjoiMDZmNTFlNGYtNjEzOC00Mjg0LTliNzMtZWVmZjc5NDEyYzc1IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3MjYwNDc1NjEsImlzcyI6InlvdXJhcHBpc3N1ZXIiLCJhdWQiOiJ5b3VyYXBwYXVkaWVuY2UifQ.N6YdCPl-GFlC8CIQDqtr5J6M-SUqqbflO2SwlM0Hpws",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "http://localhost:5000/api/authors/1",
 					"protocol": "http",
@@ -52,7 +64,13 @@
 			"name": "Добавление нового автора",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwianRpIjoiMDZmNTFlNGYtNjEzOC00Mjg0LTliNzMtZWVmZjc5NDEyYzc1IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3MjYwNDc1NjEsImlzcyI6InlvdXJhcHBpc3N1ZXIiLCJhdWQiOiJ5b3VyYXBwYXVkaWVuY2UifQ.N6YdCPl-GFlC8CIQDqtr5J6M-SUqqbflO2SwlM0Hpws",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n    \"FirstName\": \"John\",\r\n    \"LastName\": \"Doe\",\r\n    \"BirthDate\": \"1980-01-01\",\r\n    \"Country\": \"USA\"\r\n  \r\n}\r\n",
@@ -81,7 +99,13 @@
 			"name": "Изменение информации о существующем авторе",
 			"request": {
 				"method": "PUT",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwianRpIjoiMDZmNTFlNGYtNjEzOC00Mjg0LTliNzMtZWVmZjc5NDEyYzc1IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3MjYwNDc1NjEsImlzcyI6InlvdXJhcHBpc3N1ZXIiLCJhdWQiOiJ5b3VyYXBwYXVkaWVuY2UifQ.N6YdCPl-GFlC8CIQDqtr5J6M-SUqqbflO2SwlM0Hpws",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n    \"Id\": 1,\r\n    \"FirstName\": \"John\",\r\n    \"LastName\": \"Doe\",\r\n    \"BirthDate\": \"1980-01-01\",\r\n    \"Country\": \"USA\"\r\n}\r\n",
@@ -111,7 +135,13 @@
 			"name": "Удаление автора",
 			"request": {
 				"method": "DELETE",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwianRpIjoiMDZmNTFlNGYtNjEzOC00Mjg0LTliNzMtZWVmZjc5NDEyYzc1IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3MjYwNDc1NjEsImlzcyI6InlvdXJhcHBpc3N1ZXIiLCJhdWQiOiJ5b3VyYXBwYXVkaWVuY2UifQ.N6YdCPl-GFlC8CIQDqtr5J6M-SUqqbflO2SwlM0Hpws",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n    \"Id\": 1,\r\n    \"FirstName\": \"John\",\r\n    \"LastName\": \"Doe\",\r\n    \"BirthDate\": \"1980-01-01\",\r\n    \"Country\": \"USA\"\r\n}\r\n",
@@ -141,7 +171,13 @@
 			"name": "Получение всех книг по автору",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwianRpIjoiMDZmNTFlNGYtNjEzOC00Mjg0LTliNzMtZWVmZjc5NDEyYzc1IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3MjYwNDc1NjEsImlzcyI6InlvdXJhcHBpc3N1ZXIiLCJhdWQiOiJ5b3VyYXBwYXVkaWVuY2UifQ.N6YdCPl-GFlC8CIQDqtr5J6M-SUqqbflO2SwlM0Hpws",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "http://localhost:5000/api/authors/1/books",
 					"protocol": "http",

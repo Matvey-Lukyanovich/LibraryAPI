@@ -1,15 +1,16 @@
 ﻿using LibraryAPI.Domain;
 using LibraryAPI.Persistence;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-[Route("api/[controller]")]
 [ApiController]
-
-    public class BooksController : ControllerBase
+[Route("api/[controller]")]
+[Authorize(Policy = "AdminOnly")]
+public class BooksController : ControllerBase
     {
         private readonly LibraryDbContext _context;
 

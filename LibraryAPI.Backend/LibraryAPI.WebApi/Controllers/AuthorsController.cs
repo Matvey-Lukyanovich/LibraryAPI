@@ -7,12 +7,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using LibraryAPI.Persistence;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LibraryAPI.WebApi.Controllers
 {
 
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
+    [Authorize(Policy = "AdminOnly")]
     public class AuthorsController : ControllerBase
     {
         private readonly LibraryDbContext _context;

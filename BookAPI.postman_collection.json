@@ -16,6 +16,11 @@
 						"key": "Content-Type",
 						"value": "application/json",
 						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwianRpIjoiMDZmNTFlNGYtNjEzOC00Mjg0LTliNzMtZWVmZjc5NDEyYzc1IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3MjYwNDc1NjEsImlzcyI6InlvdXJhcHBpc3N1ZXIiLCJhdWQiOiJ5b3VyYXBwYXVkaWVuY2UifQ.N6YdCPl-GFlC8CIQDqtr5J6M-SUqqbflO2SwlM0Hpws",
+						"type": "text"
 					}
 				],
 				"body": {
@@ -51,6 +56,11 @@
 						"key": "Content-Type",
 						"value": "application/json",
 						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwianRpIjoiMDZmNTFlNGYtNjEzOC00Mjg0LTliNzMtZWVmZjc5NDEyYzc1IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3MjYwNDc1NjEsImlzcyI6InlvdXJhcHBpc3N1ZXIiLCJhdWQiOiJ5b3VyYXBwYXVkaWVuY2UifQ.N6YdCPl-GFlC8CIQDqtr5J6M-SUqqbflO2SwlM0Hpws",
+						"type": "text"
 					}
 				],
 				"url": {
@@ -81,7 +91,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/api/books/1",
+					"raw": "http://localhost:5000/api/books/1?Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwianRpIjoiMDZmNTFlNGYtNjEzOC00Mjg0LTliNzMtZWVmZjc5NDEyYzc1IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3MjYwNDc1NjEsImlzcyI6InlvdXJhcHBpc3N1ZXIiLCJhdWQiOiJ5b3VyYXBwYXVkaWVuY2UifQ.N6YdCPl-GFlC8CIQDqtr5J6M-SUqqbflO2SwlM0Hpws",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -91,6 +101,12 @@
 						"api",
 						"books",
 						"1"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwianRpIjoiMDZmNTFlNGYtNjEzOC00Mjg0LTliNzMtZWVmZjc5NDEyYzc1IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3MjYwNDc1NjEsImlzcyI6InlvdXJhcHBpc3N1ZXIiLCJhdWQiOiJ5b3VyYXBwYXVkaWVuY2UifQ.N6YdCPl-GFlC8CIQDqtr5J6M-SUqqbflO2SwlM0Hpws"
+						}
 					]
 				}
 			},
@@ -109,7 +125,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/api/books/isbn/978-3-16-148410-0",
+					"raw": "http://localhost:5000/api/books/isbn/978-3-16-148410-0?Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwianRpIjoiMDZmNTFlNGYtNjEzOC00Mjg0LTliNzMtZWVmZjc5NDEyYzc1IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3MjYwNDc1NjEsImlzcyI6InlvdXJhcHBpc3N1ZXIiLCJhdWQiOiJ5b3VyYXBwYXVkaWVuY2UifQ.N6YdCPl-GFlC8CIQDqtr5J6M-SUqqbflO2SwlM0Hpws",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -120,6 +136,12 @@
 						"books",
 						"isbn",
 						"978-3-16-148410-0"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwianRpIjoiMDZmNTFlNGYtNjEzOC00Mjg0LTliNzMtZWVmZjc5NDEyYzc1IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3MjYwNDc1NjEsImlzcyI6InlvdXJhcHBpc3N1ZXIiLCJhdWQiOiJ5b3VyYXBwYXVkaWVuY2UifQ.N6YdCPl-GFlC8CIQDqtr5J6M-SUqqbflO2SwlM0Hpws"
+						}
 					]
 				}
 			},
@@ -133,6 +155,11 @@
 					{
 						"key": "Content-Type",
 						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwianRpIjoiMDZmNTFlNGYtNjEzOC00Mjg0LTliNzMtZWVmZjc5NDEyYzc1IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3MjYwNDc1NjEsImlzcyI6InlvdXJhcHBpc3N1ZXIiLCJhdWQiOiJ5b3VyYXBwYXVkaWVuY2UifQ.N6YdCPl-GFlC8CIQDqtr5J6M-SUqqbflO2SwlM0Hpws",
 						"type": "text"
 					}
 				],
@@ -170,19 +197,15 @@
 						"key": "Content-Type",
 						"value": "application/json",
 						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwianRpIjoiMDZmNTFlNGYtNjEzOC00Mjg0LTliNzMtZWVmZjc5NDEyYzc1IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3MjYwNDc1NjEsImlzcyI6InlvdXJhcHBpc3N1ZXIiLCJhdWQiOiJ5b3VyYXBwYXVkaWVuY2UifQ.N6YdCPl-GFlC8CIQDqtr5J6M-SUqqbflO2SwlM0Hpws",
+						"type": "text"
 					}
 				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"Id\": 1,\r\n    \"ISBN\": \"978-3-16-148410-0\",\r\n    \"Title\": \"Updated Book Title\",\r\n    \"Genre\": \"Non-Fiction\",\r\n    \"Description\": \"An updated description of the book.\",\r\n    \"AuthorId\": 1, // Убедитесь, что ID существует\r\n    \"BorrowedAt\": null,\r\n    \"ReturnBy\": null,\r\n    \"ImageUrl\": \"-\",\r\n    \"IsBorrowed\": false\r\n}\r\n",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
-					"raw": "http://localhost:5000/api/books/2",
+					"raw": "http://localhost:5000/api/books/8",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -191,7 +214,7 @@
 					"path": [
 						"api",
 						"books",
-						"2"
+						"8"
 					]
 				}
 			},
@@ -205,6 +228,11 @@
 					{
 						"key": "Content-Type",
 						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwianRpIjoiMDZmNTFlNGYtNjEzOC00Mjg0LTliNzMtZWVmZjc5NDEyYzc1IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3MjYwNDc1NjEsImlzcyI6InlvdXJhcHBpc3N1ZXIiLCJhdWQiOiJ5b3VyYXBwYXVkaWVuY2UifQ.N6YdCPl-GFlC8CIQDqtr5J6M-SUqqbflO2SwlM0Hpws",
 						"type": "text"
 					}
 				],
@@ -243,6 +271,11 @@
 						"key": "Content-Type",
 						"value": "application/json",
 						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwianRpIjoiMDZmNTFlNGYtNjEzOC00Mjg0LTliNzMtZWVmZjc5NDEyYzc1IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3MjYwNDc1NjEsImlzcyI6InlvdXJhcHBpc3N1ZXIiLCJhdWQiOiJ5b3VyYXBwYXVkaWVuY2UifQ.N6YdCPl-GFlC8CIQDqtr5J6M-SUqqbflO2SwlM0Hpws",
+						"type": "text"
 					}
 				],
 				"body": {
@@ -279,6 +312,11 @@
 					{
 						"key": "Content-Type",
 						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwianRpIjoiMDZmNTFlNGYtNjEzOC00Mjg0LTliNzMtZWVmZjc5NDEyYzc1IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3MjYwNDc1NjEsImlzcyI6InlvdXJhcHBpc3N1ZXIiLCJhdWQiOiJ5b3VyYXBwYXVkaWVuY2UifQ.N6YdCPl-GFlC8CIQDqtr5J6M-SUqqbflO2SwlM0Hpws",
 						"type": "text"
 					}
 				],

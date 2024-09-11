@@ -90,6 +90,29 @@ namespace LibraryAPI.Persistence.Migrations
                     b.ToTable("Books");
                 });
 
+            modelBuilder.Entity("LibraryAPI.Domain.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
+                });
+
             modelBuilder.Entity("LibraryAPI.Domain.Book", b =>
                 {
                     b.HasOne("LibraryAPI.Domain.Author", "Author")
