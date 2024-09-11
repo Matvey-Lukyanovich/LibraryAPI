@@ -14,6 +14,7 @@ C:\Users\lyk_2\OneDrive\Desktop\TASK\new\LibraryAPI.Backend\LibraryAPI.Applicati
 C:\Users\lyk_2\OneDrive\Desktop\TASK\new\LibraryAPI.Backend\LibraryAPI.Application\obj\Debug\net7.0\LibraryAPI.Application.pdb
 C:\Users\lyk_2\OneDrive\Desktop\TASK\new\LibraryAPI.Backend\LibraryAPI.Application\obj\Debug\net7.0\ref\LibraryAPI.Application.dll
 C:\Users\lyk_2\OneDrive\Desktop\TASK\git\LibraryAPI\LibraryAPI.Backend\LibraryAPI.Application\bin\Debug\net7.0\LibraryAPI.Application.deps.json
+C:\Users\lyk_2\OneDrive\Desktop\TASK\git\LibraryAPI\LibraryAPI.Backend\LibraryAPI.Application\bin\Debug\net7.0\LibraryAPI.Application.runtimeconfig.json
 C:\Users\lyk_2\OneDrive\Desktop\TASK\git\LibraryAPI\LibraryAPI.Backend\LibraryAPI.Application\bin\Debug\net7.0\LibraryAPI.Application.dll
 C:\Users\lyk_2\OneDrive\Desktop\TASK\git\LibraryAPI\LibraryAPI.Backend\LibraryAPI.Application\bin\Debug\net7.0\LibraryAPI.Application.pdb
 C:\Users\lyk_2\OneDrive\Desktop\TASK\git\LibraryAPI\LibraryAPI.Backend\LibraryAPI.Application\bin\Debug\net7.0\LibraryAPI.Domain.dll
@@ -27,6 +28,5 @@ C:\Users\lyk_2\OneDrive\Desktop\TASK\git\LibraryAPI\LibraryAPI.Backend\LibraryAP
 C:\Users\lyk_2\OneDrive\Desktop\TASK\git\LibraryAPI\LibraryAPI.Backend\LibraryAPI.Application\obj\Debug\net7.0\LibraryAPI.Application.dll
 C:\Users\lyk_2\OneDrive\Desktop\TASK\git\LibraryAPI\LibraryAPI.Backend\LibraryAPI.Application\obj\Debug\net7.0\refint\LibraryAPI.Application.dll
 C:\Users\lyk_2\OneDrive\Desktop\TASK\git\LibraryAPI\LibraryAPI.Backend\LibraryAPI.Application\obj\Debug\net7.0\LibraryAPI.Application.pdb
-C:\Users\lyk_2\OneDrive\Desktop\TASK\git\LibraryAPI\LibraryAPI.Backend\LibraryAPI.Application\obj\Debug\net7.0\ref\LibraryAPI.Application.dll
-C:\Users\lyk_2\OneDrive\Desktop\TASK\git\LibraryAPI\LibraryAPI.Backend\LibraryAPI.Application\bin\Debug\net7.0\LibraryAPI.Application.runtimeconfig.json
 C:\Users\lyk_2\OneDrive\Desktop\TASK\git\LibraryAPI\LibraryAPI.Backend\LibraryAPI.Application\obj\Debug\net7.0\LibraryAPI.Application.genruntimeconfig.cache
+C:\Users\lyk_2\OneDrive\Desktop\TASK\git\LibraryAPI\LibraryAPI.Backend\LibraryAPI.Application\obj\Debug\net7.0\ref\LibraryAPI.Application.dll

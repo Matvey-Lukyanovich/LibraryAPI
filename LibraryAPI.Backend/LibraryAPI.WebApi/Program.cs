@@ -25,7 +25,7 @@ namespace LibraryAPI.WebApi
            });
 
             // Регистрация ApplicationDbContext
-            builder.Services.AddDbContext<LibraryDbConext>(options =>
+            builder.Services.AddDbContext<LibraryDbContext>(options =>
                 options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
                     new MySqlServerVersion(new Version(8, 0, 21))));
 

@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using LibraryAPI.Domain;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 namespace LibraryAPI.Persistence.EntityTypeConfiguration
 {

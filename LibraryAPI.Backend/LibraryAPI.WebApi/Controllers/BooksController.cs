@@ -11,9 +11,9 @@ using System.Threading.Tasks;
 
     public class BooksController : ControllerBase
     {
-        private readonly LibraryDbConext _context;
+        private readonly LibraryDbContext _context;
 
-        public BooksController(LibraryDbConext context)
+        public BooksController(LibraryDbContext context)
         {
             _context = context;
         }

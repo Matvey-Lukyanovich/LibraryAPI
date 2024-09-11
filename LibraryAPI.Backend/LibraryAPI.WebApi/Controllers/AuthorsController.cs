@@ -15,9 +15,9 @@ namespace LibraryAPI.WebApi.Controllers
     [ApiController]
     public class AuthorsController : ControllerBase
     {
-        private readonly LibraryDbConext _context;
+        private readonly LibraryDbContext _context;
 
-        public AuthorsController(LibraryDbConext context)
+        public AuthorsController(LibraryDbContext context)
         {
             _context = context;
         }
