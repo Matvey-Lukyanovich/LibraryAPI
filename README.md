@@ -1,10 +1,10 @@
 1. Запускаем base.sql скрипт(MySQL. При тестировании использовал MySQL Workbench 8.0 ). Создается база данных.
 
-2. Далее запуская VS(2022, .NET 7.0) и LibraryAPI.sln. 
+2. Далее запуская VS(2022, .NET 7.0) и LibraryAPI.Backend.sln (Presentation/LibraryAPI.WebApi (ПКМ "Set as Startup Project")). 
 
 !!!!LibraryAPI/appsettings.json 
 -- Указываем данные для подключение к БД(адресс, название_БД, Имя_пользователя, пароль)
--- Тестировалось на IIS Express
+-- Тестировалось на "HTTP"
 
 Открытие командной строки  PowerShell из Visual Studio:
 В Visual Studio откройте "Панель инструментов".
@@ -12,8 +12,9 @@
 
 
 3. Делаем миграцию:
-PS C:\....\Test-Task\LibraryAPI> dotnet ef migrations add InitialCreate
-PS C:\....\Test-Task\LibraryAPI> dotnet ef database update
+PS C:\....\LibraryAPI\LibraryAPI.Backend> cd LibraryAPI.Application
+PS C:\....\LibraryAPI\LibraryAPI.Backend\LibraryAPI.Application> dotnet ef migrations add InitialCreate
+PS C:\....\LibraryAPI\LibraryAPI.Backend\LibraryAPI.Application> dotnet ef database update
 
 *если не сработало то возможно поставить Entity Framework Core
 *вписываем:
