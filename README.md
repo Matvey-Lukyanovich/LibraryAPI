@@ -25,7 +25,8 @@ PS C:\....\LibraryAPI\LibraryAPI.Backend\LibraryAPI.WebApi> dotnet ef database u
 
 
 4. После этого в БД у нас появляются таблицы и поля.
-
+запускаем SQL-скрипт:
+INSERT INTO LibraryDb.users ( UserName, Password, Role) VALUES ('Admin', 'Admin', 'Admin');
 
 5. Запускаем проект (http://localhost:5000/). Запускается интерфейс Swagger
 
