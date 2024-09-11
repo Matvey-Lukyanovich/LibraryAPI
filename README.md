@@ -25,14 +25,22 @@ PS C:\....\LibraryAPI\LibraryAPI.Backend\LibraryAPI.WebApi> dotnet ef database u
 
 
 4. После этого в БД у нас появляются таблицы и поля.
-
+запускаем SQL-скрипт:
+INSERT INTO LibraryDb.users ( UserName, Password, Role) VALUES ('Admin', 'Admin', 'Admin');
 
 5. Запускаем проект (http://localhost:5000/). Запускается интерфейс Swagger
 
 
 6. Далее запускаем Postman и импортируем "AuthorAPI.postman_collection.json" и "BookAPI.postman_collection.json". Там написанные обращение к API и описание запросов (см."Postman.png")
-
-
+*!UPD. Добавлено "JWT авторизации в Postman.postman_collection.json"
+*с методом POST и Body:
+*{
+*  "UserName": "Admin",
+*  "Password": "Admin"
+*}
+* При выполнении мы получим токен. И далее он используеться во всех запросах в "AuthorAPI.postman_collection.json" и "BookAPI.postman_collection.json". 
+* В "Headers"  key: Authorization  Value: Bearer eyJhb..0Hpws (ключ из метода "JWT авторизации в Postman.postman_collection.json")
+ 
 7. Так же написан небольшой клиент на React. запускаем из католога "library-client" команду "npm start" (LibraryAPI.sln тоже должен быть запущен)
 
 PS C:\...\Test-Task> cd library-client
