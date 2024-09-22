@@ -1,58 +1,40 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.Extensions.Configuration;
-using LibraryAPI.WebApi.Models;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Collections.Generic;
-using LibraryAPI.Domain;
-using Microsoft.EntityFrameworkCore;
-using LibraryAPI.Persistence;
-using Microsoft.IdentityModel.Tokens;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
+﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using LibraryAPI.WebApi.Models;
+using LibraryAPI.Application.Auth.Commands;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LibraryAPI.WebApi.Controllers
 {
+    
     [ApiController]
     [Route("api/[controller]")]
     public class AuthController : ControllerBase
     {
-        private readonly TokenService _tokenService;
-        private readonly LibraryDbContext _context;
+        private readonly IMediator _mediator;
 
-        public AuthController(TokenService tokenService, LibraryDbContext context)
+        public AuthController(IMediator mediator)
         {
-            _tokenService = tokenService;
-            _context = context;
+            _mediator = mediator;
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] LoginRequest request)
+        public async Task<IActionResult> Login([FromBody] LoginCommand command)
         {
-            var user = await _context.Users
-                .FirstOrDefaultAsync(u => u.UserName == request.UserName && u.Password == request.Password);
-
-            if (user == null)
+            try
+            {
+                var response = await _mediator.Send(command);
+                return Ok(response);
+            }
+            catch (UnauthorizedAccessException)
             {
                 return Unauthorized();
             }
-
-            var token = _tokenService.GenerateToken(user.Id.ToString(), user.Role);
-            return Ok(new { Token = token });
+            catch (Exception ex)
+            {
+                // Логирование ошибки
+                return StatusCode(500, new { message = ex.Message });
+            }
         }
-
-        // Метод для валидации пользователя (здесь можно добавить свою логику)
-        private User ValidateUser(string username, string password)
-        {
-            // Примерная логика, замените своей
-            // Загрузка пользователя из базы данных или другой источник
-            return new User { Id = 1, Role = "User" }; // Пример
-        }
-
     }
 }

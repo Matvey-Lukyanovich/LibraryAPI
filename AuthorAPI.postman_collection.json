@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "42de8eb5-451e-40ef-9911-7b665308af88",
 		"name": "AuthorAPI",
-		"description": "#### 1\\. **GET** **`/api/authors`** **- Получение списка всех авторов**\n\n- **Тип запроса:** GET\n    \n- **URL:** `http://localhost:5000/api/authors`\n    \n\n#### 2\\. **GET** **`/api/authors/{id}`** **- Получение автора по его Id**\n\n- **Тип запроса:** GET\n    \n- **URL:** `http://localhost:5000/api/authors/1` (замените `1` на существующий ID автора).\n    \n\n3\\. **POST** **`/api/authors`** **- Добавление нового автора**\n\n- **Тип запроса:** POST\n    \n- **URL:** `http://localhost:5000/api/authors`\n    \n- **Body:** `raw` и `JSON` формат. Пример данных:\n    \n\n{  \n\"FirstName\": \"John\",  \n\"LastName\": \"Doe\",  \n\"BirthDate\": \"1980-01-01\",  \n\"Country\": \"USA\"  \n}\n\n4\\. **PUT** **`/api/authors/{id}`** **- Изменение информации о существующем авторе**\n\n- **Тип запроса:** PUT\n    \n- **URL:** `http://localhost:5000/api/authors/1` (замените `1` на существующий ID автора).\n    \n- **Body:** `raw` и `JSON` формат. Пример данных:\n    \n- {  \n    \"Id\": 1,  \n    \"FirstName\": \"John\",  \n    \"LastName\": \"Doe\",  \n    \"BirthDate\": \"1980-01-01\",  \n    \"Country\": \"USA\"  \n    }\n    \n\n5\\. **DELETE** **`/api/authors/{id}`** **- Удаление автора**\n\n- **Тип запроса:** DELETE\n    \n- **URL:** `http://localhost:5000/api/authors/1` (замените `1` на существующий ID автора)\n    \n\n#### 6\\. **GET** **`/api/authors/{id}/books`** **- Получение всех книг по автору**\n\n- **Тип запроса:** GET\n    \n- **URL:** `http://localhost:5000/api/authors/1/books` (замените `1` на существующий ID автора).",
+		"description": "#### 1\\. **GET** **`/api/authors`** **\\- Получение списка всех авторов**\n\n- **Тип запроса:** GET\n    \n- **URL:** `http://localhost:5000/api/authors`\n    \n\n#### 2\\. **GET** **`/api/authors/{id}`** **\\- Получение автора по его Id**\n\n- **Тип запроса:** GET\n    \n- **URL:** `http://localhost:5000/api/authors/1` (замените `1` на существующий ID автора).\n    \n\n3\\. **POST** **`/api/authors`** **\\- Добавление нового автора**\n\n- **Тип запроса:** POST\n    \n- **URL:** `http://localhost:5000/api/authors`\n    \n- **Body:** `raw` и `JSON` формат. Пример данных:\n    \n\n{  \n\"FirstName\": \"John\",  \n\"LastName\": \"Doe\",  \n\"BirthDate\": \"1980-01-01\",  \n\"Country\": \"USA\"  \n}\n\n4\\. **PUT** **`/api/authors/{id}`** **\\- Изменение информации о существующем авторе**\n\n- **Тип запроса:** PUT\n    \n- **URL:** `http://localhost:5000/api/authors/1` (замените `1` на существующий ID автора).\n    \n- **Body:** `raw` и `JSON` формат. Пример данных:\n    \n- {  \n    \"Id\": 1,  \n    \"FirstName\": \"John\",  \n    \"LastName\": \"Doe\",  \n    \"BirthDate\": \"1980-01-01\",  \n    \"Country\": \"USA\"  \n    }\n    \n\n5\\. **DELETE** **`/api/authors/{id}`** **\\- Удаление автора**\n\n- **Тип запроса:** DELETE\n    \n- **URL:** `http://localhost:5000/api/authors/1` (замените `1` на существующий ID автора)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "38045557"
 	},
@@ -14,7 +14,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwianRpIjoiMDZmNTFlNGYtNjEzOC00Mjg0LTliNzMtZWVmZjc5NDEyYzc1IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3MjYwNDc1NjEsImlzcyI6InlvdXJhcHBpc3N1ZXIiLCJhdWQiOiJ5b3VyYXBwYXVkaWVuY2UifQ.N6YdCPl-GFlC8CIQDqtr5J6M-SUqqbflO2SwlM0Hpws",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTcyNzAwOTExMiwiaXNzIjoieW91cklzc3VlciIsImF1ZCI6InlvdXJBdWRpZW5jZSJ9.anyieuR7kK0JVUGYfGuz3bhVooP5DkyL1Oax7QutT3A",
 						"type": "text"
 					}
 				],
@@ -40,7 +40,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwianRpIjoiMDZmNTFlNGYtNjEzOC00Mjg0LTliNzMtZWVmZjc5NDEyYzc1IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3MjYwNDc1NjEsImlzcyI6InlvdXJhcHBpc3N1ZXIiLCJhdWQiOiJ5b3VyYXBwYXVkaWVuY2UifQ.N6YdCPl-GFlC8CIQDqtr5J6M-SUqqbflO2SwlM0Hpws",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTcyNzAwOTExMiwiaXNzIjoieW91cklzc3VlciIsImF1ZCI6InlvdXJBdWRpZW5jZSJ9.anyieuR7kK0JVUGYfGuz3bhVooP5DkyL1Oax7QutT3A",
 						"type": "text"
 					}
 				],
@@ -67,7 +67,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwianRpIjoiMDZmNTFlNGYtNjEzOC00Mjg0LTliNzMtZWVmZjc5NDEyYzc1IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3MjYwNDc1NjEsImlzcyI6InlvdXJhcHBpc3N1ZXIiLCJhdWQiOiJ5b3VyYXBwYXVkaWVuY2UifQ.N6YdCPl-GFlC8CIQDqtr5J6M-SUqqbflO2SwlM0Hpws",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTcyNzAwOTExMiwiaXNzIjoieW91cklzc3VlciIsImF1ZCI6InlvdXJBdWRpZW5jZSJ9.anyieuR7kK0JVUGYfGuz3bhVooP5DkyL1Oax7QutT3A",
 						"type": "text"
 					}
 				],
@@ -102,7 +102,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwianRpIjoiMDZmNTFlNGYtNjEzOC00Mjg0LTliNzMtZWVmZjc5NDEyYzc1IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3MjYwNDc1NjEsImlzcyI6InlvdXJhcHBpc3N1ZXIiLCJhdWQiOiJ5b3VyYXBwYXVkaWVuY2UifQ.N6YdCPl-GFlC8CIQDqtr5J6M-SUqqbflO2SwlM0Hpws",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTcyNzAwOTExMiwiaXNzIjoieW91cklzc3VlciIsImF1ZCI6InlvdXJBdWRpZW5jZSJ9.anyieuR7kK0JVUGYfGuz3bhVooP5DkyL1Oax7QutT3A",
 						"type": "text"
 					}
 				],
@@ -138,7 +138,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwianRpIjoiMDZmNTFlNGYtNjEzOC00Mjg0LTliNzMtZWVmZjc5NDEyYzc1IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3MjYwNDc1NjEsImlzcyI6InlvdXJhcHBpc3N1ZXIiLCJhdWQiOiJ5b3VyYXBwYXVkaWVuY2UifQ.N6YdCPl-GFlC8CIQDqtr5J6M-SUqqbflO2SwlM0Hpws",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTcyNzAwOTExMiwiaXNzIjoieW91cklzc3VlciIsImF1ZCI6InlvdXJBdWRpZW5jZSJ9.anyieuR7kK0JVUGYfGuz3bhVooP5DkyL1Oax7QutT3A",
 						"type": "text"
 					}
 				],
@@ -152,7 +152,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/authors/2",
+					"raw": "http://localhost:5000/api/authors/3",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -161,35 +161,7 @@
 					"path": [
 						"api",
 						"authors",
-						"2"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Получение всех книг по автору",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwianRpIjoiMDZmNTFlNGYtNjEzOC00Mjg0LTliNzMtZWVmZjc5NDEyYzc1IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3MjYwNDc1NjEsImlzcyI6InlvdXJhcHBpc3N1ZXIiLCJhdWQiOiJ5b3VyYXBwYXVkaWVuY2UifQ.N6YdCPl-GFlC8CIQDqtr5J6M-SUqqbflO2SwlM0Hpws",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "http://localhost:5000/api/authors/1/books",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"api",
-						"authors",
-						"1",
-						"books"
+						"3"
 					]
 				}
 			},

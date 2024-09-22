@@ -9,7 +9,19 @@ using LibraryAPI.Persistence;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using LibraryAPI.WebApi.Models;
+using LibraryAPI.Infrastructure.Repositories;
+using MediatR;
+using LibraryAPI.Application;
+using MediatR;
+using System.Reflection; // Для получения сборок
+using LibraryAPI.Application.Auth.Commands;
+using LibraryAPI.Persistence.Repositories;
+using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.Extensions.DependencyInjection;
+using LibraryAPI.Infrastructure.Services;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace LibraryAPI.WebApi
 {
@@ -17,7 +29,10 @@ namespace LibraryAPI.WebApi
     {
         public static void Main(string[] args)
         {
-            var builder = WebApplication.CreateBuilder(args);
+            
+
+                var builder = WebApplication.CreateBuilder(args);
+            var configuration = builder.Configuration;
             // Настройка сервисов
             builder.Services.AddControllers()
                 .AddNewtonsoftJson(options =>
@@ -26,30 +41,36 @@ namespace LibraryAPI.WebApi
                     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
                 });
 
-            // Регистрация TokenService
-            builder.Services.AddScoped<TokenService>();
+
+            // Добавление конфигурации из appsettings.json
+            builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+
+
+
+            // Регистрация DbContext
+            builder.Services.AddDbContext<LibraryDbContext>(options =>
+                options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
+                new MySqlServerVersion(new Version(8, 0, 25)))); // Укажите версию MySQL, которую используете
+
 
             // Настройка JWT аутентификации
-            var key = Encoding.ASCII.GetBytes(builder.Configuration["Jwt:Key"]);
-            builder.Services.AddAuthentication(x =>
-            {
-                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
-            .AddJwtBearer(x =>
-            {
-                x.RequireHttpsMetadata = false;
-                x.SaveToken = true;
-                x.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(key),
-                    ValidateIssuer = true,
-                    ValidateAudience = true,
-                    ValidIssuer = builder.Configuration["Jwt:Issuer"],
-                    ValidAudience = builder.Configuration["Jwt:Audience"]
-                };
-            });
+            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+     .AddJwtBearer(options =>
+     {
+         options.TokenValidationParameters = new TokenValidationParameters
+         {
+             ValidateIssuer = true,
+             ValidateAudience = true,
+             ValidateLifetime = true,
+             ValidateIssuerSigningKey = true,
+             ValidIssuer = builder.Configuration["Jwt:Issuer"],
+             ValidAudience = builder.Configuration["Jwt:Audience"],
+             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:SecretKey"]))
+         };
+
+     });
+
+
 
             // Регистрация политик авторизации
             builder.Services.AddAuthorization(options =>
@@ -60,8 +81,10 @@ namespace LibraryAPI.WebApi
 
             // Регистрация ApplicationDbContext
             builder.Services.AddDbContext<LibraryDbContext>(options =>
-                options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
-                    new MySqlServerVersion(new Version(8, 0, 21))));
+               options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
+                   new MySqlServerVersion(new Version(8, 0, 21))));
+
+
 
             // Добавление Swagger
             builder.Services.AddSwaggerGen(c =>
@@ -91,7 +114,39 @@ namespace LibraryAPI.WebApi
                 });
             });
 
-            var app = builder.Build();
+
+            
+            // Регистрация ITokenService
+            builder.Services.AddScoped<ITokenService, TokenService>();
+
+            // Регистрация TokenService
+            builder.Services.AddScoped<IBookRepository, BookRepository>();
+
+            builder.Services.AddDbContext<LibraryDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
+            // Регистрация MediatR для сборки, где находятся команды и обработчики
+            builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
+            builder.Services.AddScoped<IUserRepository, UserRepository>();
+            
+            builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<LoginCommandHandler>());
+
+
+            builder.Services.AddDbContext<LibraryDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
+ 
+
+
+            builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(LoginCommandHandler).Assembly));
+
+
+                try
+                {
+
+                    var app = builder.Build();
 
             // Использование Swagger в режиме разработки
             if (app.Environment.IsDevelopment())
@@ -118,6 +173,13 @@ namespace LibraryAPI.WebApi
             app.MapControllers();
 
             app.Run();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
         }
     }
 }
